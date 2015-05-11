@@ -81,7 +81,7 @@ describe("server api", () => {
         sendName = (name, client) => {
           client.on('connect', () => 
             client.emit('new-user', { name: name }));
-        }
+        };
 
       client2 = io.connect(socketURL, options);
       client3 = io.connect(socketURL, options);
